@@ -1,73 +1,71 @@
-# Welcome to your Lovable project
+# 💧 Pingou - Guarde dinheiro sem perceber
 
-## Project info
+**Projeto Integrador: Desenvolvimento de Sistemas Orientado a Dispositivos Móveis Baseados na Web** **Curso:** Tecnologia em Análise e Desenvolvimento de Sistemas (TADS) / TSI - Senac EAD  
+**Professor:** Gustavo Calixto  
+**Etapa:** 2ª Entrega - Prova de Conceito (PoC)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 📌 Sobre o Projeto
+O **Pingou** é uma aplicação web mobile-first focada em transformar pequenos gastos cotidianos em reservas para metas específicas. Diferente de um gerenciador financeiro tradicional, o Pingou atua na **gestão de hábitos e recompensas psicológicas**, utilizando micro-interações para reduzir a fricção emocional de poupar.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🎯 Prova de Conceito (PoC) - Escopo da 2ª Entrega
+Revisitando o projeto da 1ª etapa, definimos que a nossa Prova de Conceito (PoC) focará na jornada de **"Acesso Inicial e Configuração Essencial"**. 
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+**Justificativa:** Esta é a jornada core do produto. Para validar a proposta de valor do Pingou (simplicidade radical e redução de carga cognitiva), precisamos provar que o usuário consegue criar um "Cofre" (meta) e configurar uma "Regra de Economia" em poucos cliques, recebendo feedback visual imediato.
 
-Changes made via Lovable will be committed automatically to this repo.
+**Funcionalidades implementadas nesta entrega:**
+- Onboarding rápido (definição de Meta e Valor Alvo).
+- Seleção de Regras de Economia (gatilhos de hábitos).
+- Dashboard visual simulando o progresso da meta.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Tecnologias e Ambiente de Desenvolvimento
+Para a construção desta PoC, o ambiente foi estruturado com as seguintes tecnologias:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+* **Frontend:** React.js / Vite (com Tailwind CSS para componentização mobile-first).
+* **Backend:** Node.js / Express *(Ajuste conforme o que vocês efetivamente usaram)*.
+* **Banco de Dados:** SQLite / LocalStorage *(Ajuste para o banco utilizado, ex: PostgreSQL, Firebase, etc)*.
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🎥 Vídeo de Apresentação
+Conforme exigido na rubrica, preparamos um vídeo curto (máx. 1 minuto) apresentando a Prova de Conceito funcionando:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+▶️ **[Inserir aqui o Link do Vídeo no YouTube ou caminho do arquivo .mp4 no repositório]**
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 🚀 Como executar o projeto localmente
+
+Siga os passos abaixo para rodar a aplicação na sua máquina:
+
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/SEU-USUARIO/pingou.git](https://github.com/SEU-USUARIO/pingou.git)
+   
+2. Acesse a pasta do projeto:
+Bash
+cd pingou
+
+3.Instale as dependências:
+
+Bash
+npm install
+Inicie o servidor de desenvolvimento:
+Bash
 npm run dev
-```
+Acesse no navegador:
+Abra http://localhost:5173 (ou a porta indicada no terminal). Recomendamos utilizar o modo de inspeção do navegador (F12) e simular a visualização em um dispositivo móvel (ex: iPhone 12) para a melhor experiência UX.
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+👥 Integrantes do Grupo 11
+Wesley Sousa Cordeiro
+Rodrigo Antunes Carvalho Souza
+Tatiane Gomes dos Santos
+Fabricio Portela Machado
+Fernando Gabriel Ferreira
+Pedro Henrique Borges da Silva
+***
