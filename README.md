@@ -63,7 +63,7 @@ Abra http://localhost:5173 (ou a porta indicada no terminal). Recomendamos utili
 
 ---
 
-👥 Integrantes do Grupo 11
+👥 Integrantes do Grupo 11 <br>
 Wesley Sousa Cordeiro
 Rodrigo Antunes Carvalho Souza
 Tatiane Gomes dos Santos
