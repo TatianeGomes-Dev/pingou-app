@@ -43,7 +43,7 @@ Para a construção desta PoC, o ambiente foi estruturado com as seguintes tecno
 ## 🎥 Vídeo de Apresentação
 Conforme exigido na rubrica, preparamos um vídeo curto (máx. 1 minuto) apresentando a Prova de Conceito funcionando:
 
-▶️ **[Inserir aqui o Link do Vídeo no YouTube ou caminho do arquivo .mp4 no repositório]**
+▶️ https://www.youtube.com/watch?v=nQ2CHy_0ShE
 
 ---
 
