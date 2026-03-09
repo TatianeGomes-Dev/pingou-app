@@ -64,10 +64,10 @@ Abra http://localhost:5173 (ou a porta indicada no terminal). Recomendamos utili
 ---
 
 👥 Integrantes do Grupo 11 <br>
-Wesley Sousa Cordeiro
-Rodrigo Antunes Carvalho Souza
-Tatiane Gomes dos Santos
-Fabricio Portela Machado
-Fernando Gabriel Ferreira
-Pedro Henrique Borges da Silva
+Wesley Sousa Cordeiro<br>
+Rodrigo Antunes Carvalho Souza<br>
+Tatiane Gomes dos Santos<br>
+Fabricio Portela Machado<br>
+Fernando Gabriel Ferreira<br>
+Pedro Henrique Borges da Silva<br>
 ***
