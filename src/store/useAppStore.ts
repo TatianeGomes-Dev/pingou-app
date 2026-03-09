@@ -32,6 +32,7 @@ export interface AppState {
   addPingo: (amount: number, rule: string) => void;
   getProgress: () => number;
   getMilestone: () => number | null;
+  resetAccount: () => void;
 }
 
 const loadState = () => {
@@ -133,5 +134,14 @@ export const useAppStore = create<AppState>((set, get) => ({
       if (progress >= m && progress < m + 2) return m;
     }
     return null;
+  },
+
+  resetAccount: () => {
+    localStorage.removeItem('pingou-state');
+    set({
+      goalName: '', goalAmount: 0, userName: '', userEmail: '',
+      onboardingDone: false, activeRules: [], totalSaved: 0,
+      streak: 0, lastPingDate: null, history: [],
+    });
   },
 }));
