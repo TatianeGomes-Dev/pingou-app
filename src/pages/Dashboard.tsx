@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAppStore } from '@/store/useAppStore';
 import ProgressRing from '@/components/ProgressRing';
 import StreakCounter from '@/components/StreakCounter';
 import CelebrationModal from '@/components/CelebrationModal';
-import HistoryList from '@/components/HistoryList';
-import { Droplets, ChevronDown, ChevronUp } from 'lucide-react';
+import { usePullToRefresh } from '@/hooks/usePullToRefresh';
+import { Droplets, RefreshCw } from 'lucide-react';
 
 const ruleAmounts: Record<string, number> = {
   coffee: 5,
@@ -22,13 +22,14 @@ const ruleLabels: Record<string, string> = {
 const Dashboard = () => {
   const {
     goalName, goalAmount, userName, totalSaved, streak,
-    history, activeRules, addPingo, getProgress,
+    activeRules, addPingo, getProgress,
   } = useAppStore();
 
   const progress = getProgress();
-  const [showHistory, setShowHistory] = useState(false);
   const [celebration, setCelebration] = useState<number | null>(null);
   const [justPinged, setJustPinged] = useState(false);
+
+  const { containerRef, pullDistance, onTouchStart, onTouchMove, onTouchEnd } = usePullToRefresh();
 
   const handlePingo = (ruleId: string) => {
     const amount = ruleAmounts[ruleId] || 2;
@@ -36,7 +37,6 @@ const Dashboard = () => {
     setJustPinged(true);
     setTimeout(() => setJustPinged(false), 600);
 
-    // Check milestones
     const newProgress = ((totalSaved + amount) / goalAmount) * 100;
     const milestones = [10, 25, 50, 75, 100];
     for (const m of milestones) {
@@ -50,9 +50,24 @@ const Dashboard = () => {
   const firstName = userName.split(' ')[0];
 
   return (
-    <div className="flex min-h-screen flex-col bg-background">
+    <div
+      ref={containerRef}
+      className="flex min-h-screen flex-col bg-background pb-24"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
+      {/* Pull indicator */}
+      {pullDistance > 0 && (
+        <div className="flex justify-center" style={{ height: pullDistance }}>
+          <motion.div animate={{ rotate: pullDistance > 50 ? 180 : 0 }} className="pt-2">
+            <RefreshCw className="h-5 w-5 text-muted-foreground" />
+          </motion.div>
+        </div>
+      )}
+
       {/* Header */}
-      <div className="bg-gradient-hero px-6 pb-8 pt-10">
+      <div className="safe-area-top bg-gradient-hero px-6 pb-8 pt-10">
         <div className="mx-auto max-w-sm">
           <div className="mb-6 flex items-center justify-between">
             <div>
@@ -62,7 +77,6 @@ const Dashboard = () => {
             {streak > 0 && <StreakCounter streak={streak} />}
           </div>
 
-          {/* Progress */}
           <div className="flex flex-col items-center">
             <ProgressRing progress={progress} />
             <div className="mt-4 text-center">
@@ -80,7 +94,6 @@ const Dashboard = () => {
       {/* Quick actions */}
       <div className="flex-1 px-6 py-6">
         <div className="mx-auto max-w-sm space-y-6">
-          {/* Ping buttons */}
           <div>
             <h2 className="mb-3 text-sm font-bold text-muted-foreground uppercase tracking-wider">
               Registrar economia
@@ -90,7 +103,7 @@ const Dashboard = () => {
                 <motion.button
                   key={ruleId}
                   onClick={() => handlePingo(ruleId)}
-                  className="flex w-full items-center justify-between rounded-2xl bg-card px-5 py-4 shadow-sm active:bg-mint-light"
+                  className="tap-target flex w-full items-center justify-between rounded-2xl bg-card px-5 py-4 shadow-sm active:bg-accent"
                   whileTap={{ scale: 0.97 }}
                 >
                   <span className="text-base font-bold text-foreground">
@@ -104,7 +117,6 @@ const Dashboard = () => {
             </div>
           </div>
 
-          {/* Ping animation */}
           <AnimatePresence>
             {justPinged && (
               <motion.div
@@ -117,32 +129,9 @@ const Dashboard = () => {
               </motion.div>
             )}
           </AnimatePresence>
-
-          {/* History toggle */}
-          <button
-            onClick={() => setShowHistory(!showHistory)}
-            className="flex w-full items-center justify-between py-2 text-sm font-bold text-muted-foreground"
-          >
-            Histórico
-            {showHistory ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-          </button>
-
-          <AnimatePresence>
-            {showHistory && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: 'auto', opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                className="overflow-hidden"
-              >
-                <HistoryList entries={history} />
-              </motion.div>
-            )}
-          </AnimatePresence>
         </div>
       </div>
 
-      {/* Celebration */}
       <CelebrationModal milestone={celebration} onClose={() => setCelebration(null)} />
     </div>
   );

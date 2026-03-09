@@ -147,7 +147,7 @@ const GoalSetup = () => {
 
             <button
               onClick={() => setStep('goal')}
-              className="mt-3 w-full py-2 text-sm font-semibold text-muted-foreground"
+              className="tap-target mt-3 w-full py-2 text-sm font-semibold text-muted-foreground"
             >
               ← Voltar
             </button>
