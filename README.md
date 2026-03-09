@@ -4,7 +4,15 @@
 **Professor:** Gustavo Calixto  
 **Etapa:** 2ª Entrega - Prova de Conceito (PoC)
 
----
+👥 Integrantes do Grupo 11 <br>
+Wesley Sousa Cordeiro<br>
+Rodrigo Antunes Carvalho Souza<br>
+Tatiane Gomes dos Santos<br>
+Fabricio Portela Machado<br>
+Fernando Gabriel Ferreira<br>
+Pedro Henrique Borges da Silva<br>
+***
+
 
 ## 📌 Sobre o Projeto
 O **Pingou** é uma aplicação web mobile-first focada em transformar pequenos gastos cotidianos em reservas para metas específicas. Diferente de um gerenciador financeiro tradicional, o Pingou atua na **gestão de hábitos e recompensas psicológicas**, utilizando micro-interações para reduzir a fricção emocional de poupar.
@@ -26,7 +34,7 @@ Revisitando o projeto da 1ª etapa, definimos que a nossa Prova de Conceito (PoC
 ## 🛠️ Tecnologias e Ambiente de Desenvolvimento
 Para a construção desta PoC, o ambiente foi estruturado com as seguintes tecnologias:
 
-* **Frontend:** React.js / Vite (com Tailwind CSS para componentização mobile-first).
+* **Frontend:** React.js
 * **Backend:** Node.js / Express *(Ajuste conforme o que vocês efetivamente usaram)*.
 * **Banco de Dados:** SQLite / LocalStorage *(Ajuste para o banco utilizado, ex: PostgreSQL, Firebase, etc)*.
 
@@ -61,13 +69,5 @@ npm run dev
 Acesse no navegador:
 Abra http://localhost:5173 (ou a porta indicada no terminal). Recomendamos utilizar o modo de inspeção do navegador (F12) e simular a visualização em um dispositivo móvel (ex: iPhone 12) para a melhor experiência UX.
 
----
 
-👥 Integrantes do Grupo 11 <br>
-Wesley Sousa Cordeiro<br>
-Rodrigo Antunes Carvalho Souza<br>
-Tatiane Gomes dos Santos<br>
-Fabricio Portela Machado<br>
-Fernando Gabriel Ferreira<br>
-Pedro Henrique Borges da Silva<br>
-***
+
