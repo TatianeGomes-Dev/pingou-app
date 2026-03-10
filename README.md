@@ -46,7 +46,7 @@ Conforme exigido na rubrica, preparamos um vídeo curto (máx. 1 minuto) apresen
 
 ▶️ https://www.youtube.com/watch?v=nQ2CHy_0ShE
 
----
+----
 
 ## 🚀 Como executar o projeto localmente
 
@@ -70,5 +70,6 @@ npm run dev
 Acesse no navegador:
 Abra http://localhost:5173 (ou a porta indicada no terminal). Recomendamos utilizar o modo de inspeção do navegador (F12) e simular a visualização em um dispositivo móvel (ex: iPhone 12) para a melhor experiência UX.
 
-
+### Atualização
+Teste de commit no projeto.
 
