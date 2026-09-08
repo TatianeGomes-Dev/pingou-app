@@ -20,6 +20,18 @@ O **Pingou** é uma aplicação web mobile-first focada em transformar pequenos 
 
 ---
 
+## ✨ Funcionalidades
+Atualmente, a Prova de Conceito do Pingou permite ao usuário:
+Criar uma meta: definir um objetivo financeiro e o valor que deseja alcançar.
+
+* Definir um Cofre: criar uma reserva específica para cada objetivo.
+* Configurar uma Regra de Economia: escolher hábitos ou situações que irão contribuir para a economia de dinheiro.
+* Acompanhar o progresso: visualizar de forma simples a evolução em direção à meta.
+* Utilizar uma interface mobile-first: acessar a aplicação com uma experiência pensada principalmente para dispositivos móveis.
+* Receber feedback visual: acompanhar interações que ajudam a tornar o processo de economia mais motivador.
+
+---
+
 ## 🎯 Prova de Conceito (PoC) - Escopo da 2ª Entrega
 Revisitando o projeto da 1ª etapa, definimos que a nossa Prova de Conceito (PoC) focará na jornada de **"Acesso Inicial e Configuração Essencial"**. 
 
@@ -71,5 +83,5 @@ Acesse no navegador:
 Abra http://localhost:5173 (ou a porta indicada no terminal). Recomendamos utilizar o modo de inspeção do navegador (F12) e simular a visualização em um dispositivo móvel (ex: iPhone 12) para a melhor experiência UX.
 
 ### Atualização
-Teste de commit no projeto.
+✨ Funcionalidades.
 
